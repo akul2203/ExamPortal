@@ -1,0 +1,12 @@
+.example-header-image {
+    background-image: url('../../../../assets/test.png');
+    background-size: cover;
+  }
+  \/* styles.css or styles.scss */
+
+  .custom-small-button {
+    font-size: 8px; /* Adjust the font size as needed */
+    padding: 10px 16px; /* Adjust the padding as needed */
+    height: min-content; /* Ensure the button height adjusts to the content */
+  }
+  

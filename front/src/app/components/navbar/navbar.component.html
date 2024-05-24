@@ -1,0 +1,68 @@
+<mat-toolbar color='primary'>
+    <a 
+    
+    routerLink="/"
+    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    
+        <mat-icon>menu_book</mat-icon>
+    </a>
+    <span>ExamPortal</span>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!islogins"
+    
+    [routerLink]="'/login'"
+    
+    mat-icon-button class="example-icon favorite-icon"
+     aria-label="Example icon-button with heart icon">
+        <span style="font-size: medium;">login</span>
+       
+    </a>
+
+    <a
+   
+    *ngIf="!islogins"
+    [routerLink]="'/signup'"
+      mat-icon-button class="example-icon favorite-icon mr5 "
+      aria-label="Example icon-button with heart icon">
+      <span style="font-size: medium;">Register</span>
+    </a>
+
+    <a
+    *ngIf="role==='NORMAL'"
+    [routerLink]="'/user-dashboard/profile'"
+    
+     style="text-decoration: underline;"
+      mat-button class="example-icon favorite-icon ml5 "
+      aria-label="Example icon-button with heart icon">
+     {{login.getuser().username}}
+    
+
+    </a>
+
+    <a
+    *ngIf="role==='ADMIN'"
+    [routerLink]="'/admin/profile'"
+    
+     style="text-decoration: underline;"
+      mat-button class="example-icon favorite-icon ml5 "
+      aria-label="Example icon-button with heart icon">
+     {{login.getuser().username}}
+    
+
+    </a>
+
+    <!-- <a
+    (click)="openLogoutConfirmationDialog()"
+    *ngIf="islogins"
+      mat-button class="example-icon favorite-icon mr5 "
+      aria-label="Example icon-button with heart icon">
+      <span>Logout</span>
+    </a> -->
+
+
+</mat-toolbar>
+
+<!-- {{users|json}} -->
+
+<!-- {{ users.authorities[0].authority}} -->

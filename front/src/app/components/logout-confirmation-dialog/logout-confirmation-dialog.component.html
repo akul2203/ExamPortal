@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Logout Confirmation</h1>
+<div mat-dialog-content>
+  <p>Are you sure you want to logout?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" style="margin-right: 2%;" [mat-dialog-close]="false">Cancel</button>
+  <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+</div>

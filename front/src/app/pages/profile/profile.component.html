@@ -1,0 +1,54 @@
+<mat-card *ngIf="user!='null'">
+    <h1> <B>Your Profile Details</B></h1>
+    <!-- {{ user | json }} -->
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="container">
+          <div class="container text-center">
+            <img class="profile-image"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Icons8_flat_reading.svg/768px-Icons8_flat_reading.svg.png"
+              alt="">
+            <h1 class="mt5"><b>{{ login.getuser().firstName }} {{ login.getuser().lastName }}</b></h1>
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <!-- Styled table details -->
+              <table class="table table-bordered table-hover">
+                <tr>
+                  <td><b>User ID</b></td>
+                  <td>{{ login.getuser().userId }}</td>
+                </tr>
+                <tr>
+                  <td><b>Username</b></td>
+                  <td>{{ login.getuser().username }}</td>
+                </tr>
+                <tr>
+                  <td><b>Phone</b></td>
+                  <td>{{ login.getuser().phone }}</td>
+                </tr>
+                <tr>
+                  <td><b>Role</b></td>
+                  <td>{{ login.getUserRole() }}</td>
+                </tr>
+                <tr>
+                  <td><b>Email</b></td>
+                  <td>{{ login.getuser().email }}</td>
+                </tr>
+                <tr>
+                    <td><b>Status</b></td>
+                    <td>{{login.getuser().enabled ?"ACTIVE":"NOTACTIVE"}}</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <mat-card-actions>
+        <div class="container text-center">
+          <button mat-raised-button color="primary" style="margin: 1%;">UPDATE</button>
+          <button mat-raised-button color="accent">SHARE</button>
+        </div>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+  

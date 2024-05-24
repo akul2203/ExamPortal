@@ -1,0 +1,14 @@
+.truncate {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../../assets/quiz.png');
+    background-size: cover;
+  }

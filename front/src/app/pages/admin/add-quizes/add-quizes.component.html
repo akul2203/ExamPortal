@@ -1,0 +1,87 @@
+<mat-card>
+    <h1><b>Add New Quize +</b></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md10 offset-md-1">
+                <form  (ngSubmit)="addQuiz()">
+
+
+                    <!-- title field -->
+                    <mat-form-field style="width: 100%;" appearance="fill">
+                        <mat-label>Enter Title</mat-label>
+                        <input [(ngModel)]="quizeData.title" type="text" name="title" placeholder="Enter here" matInput required="input" />
+                    </mat-form-field>
+
+
+
+
+
+                    <!-- description field -->
+                    <mat-form-field style="width: 100%;" appearance="fill">
+                        <mat-label>Enter Description</mat-label>
+                        <textarea [(ngModel)]="quizeData.description"  name="description" matInput placeholder=" description here" rows="3"></textarea>
+                    </mat-form-field>
+
+
+
+                    <div class="row">
+
+
+
+                        <!-- max marks fields  -->
+                        <div class="col-md-6">
+                            <mat-form-field style="width: 100%;" appearance="fill">
+                                <mat-label>Enter Max_Marks</mat-label>
+                                <input [(ngModel)]="quizeData.maxMarks"  type="text" name="maxMarks" placeholder="Enter here" matInput />
+                            </mat-form-field>
+                        </div>
+
+
+
+
+                        <!-- No. of questons fields  -->
+                        <div class="col-md-6">
+                            <mat-form-field style="width: 100%;" appearance="fill">
+                                <mat-label>Enter No. of Que.</mat-label>
+                                <input [(ngModel)]="quizeData.numberOfQuestions"  type="text" name="maxMarks" placeholder="Enter here" matInput />
+                            </mat-form-field>
+                        </div>
+
+
+
+                        <!-- publish status field -->
+                        <!-- <mat-slide-toggle [(ngModel)]="quizeData.active"  class="example-margin" [checked]=true>
+                            Publish Status!
+                        </mat-slide-toggle> -->
+                        <!-- {{ quizeData | json}} -->
+                        <mat-label><b>publish status</b></mat-label>
+                        <mat-chip-listbox aria-label="Fish selection"  [(ngModel)]="quizeData.active">
+                         
+                            <mat-chip-option value="true" (click)="add(1)" color="primary">Enable</mat-chip-option>
+                            <mat-chip-option value="false" (click)="add(0)" color="accent">Disable</mat-chip-option>
+                          
+                        </mat-chip-listbox>
+
+
+                        <!-- select category -->
+
+                        <mat-form-field style="margin-top: 2%;">
+                            <mat-label>Select Categories</mat-label>
+                            <mat-select name="id" [(ngModel)]="quizeData.category.cid" >
+                                <mat-option *ngFor="let c of categories" [value]="c.cid">
+                                    {{c.title}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+                        <!-- <p> Selected food: {{selectedValue}} </p> -->
+
+                        <!-- //button for submiting data -->
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,6 @@
+.decorative-line {
+    border: black; /* Remove the default line */
+    height: 10px; /* Set the height of the line */
+    background: linear-gradient(to right, #1d0774, #504a87, #000000); /* Apply gradient for the line design */
+    margin: 20px 12; /* Adjust the margin as needed */
+}

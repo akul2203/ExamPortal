@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; 
+background-color: rgb(224, 241, 241);}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.text-center{
+    text-align: center;
+}
+
+.ml20{
+    margin-left: 20% !important;
+}
+
+.mr20{
+    margin-right: 20% !important;
+}
+.mt20{
+    margin-top: 20% !important;
+}
+.mb20{
+    margin-bottom: 20% !important;
+}
+
+
+.ml10{
+    margin-left: 10% !important;
+}
+
+.mr10{
+    margin-right: 10% !important;
+}
+.mt10{
+    margin-top: 10% !important;
+}
+.mb10{
+    margin-bottom: 10% !important;
+}
+
+.ml5{
+    margin-left: 5% !important;
+}
+
+.mr5{
+    margin-right: 5% !important;
+}
+.mt5{
+    margin-top: 5% !important;
+}
+.mb5{
+    margin-bottom: 5% !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(66, 73, 147);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.feature-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.vision {
+    font-style: italic;
+}
+
+.footer {
+    background-color: rgb(66, 73, 147);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
